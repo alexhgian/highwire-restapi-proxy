@@ -9,4 +9,4 @@ Install NodeJS using NVM
 
 Follow the install instruction using the install script: https://github.com/creationix/nvm
 
-Then run node app.js
+Then run <code> node app.js </code>
