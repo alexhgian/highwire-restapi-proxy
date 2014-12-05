@@ -53,7 +53,11 @@ var server = restify.createServer();
 
 //Allow Cross Origin Requests
 server.use(restify.CORS());
-
+server.use( function crossOrigin(req,res,next){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    return next();
+  });
 //REST API
 server.get('/api/:apikey/product', getProduct);
 server.put('/api/:apikey/product', updateProduct);
